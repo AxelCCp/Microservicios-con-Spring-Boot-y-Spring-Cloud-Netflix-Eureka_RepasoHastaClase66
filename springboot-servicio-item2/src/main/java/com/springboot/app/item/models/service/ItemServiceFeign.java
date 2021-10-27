@@ -29,6 +29,6 @@ public class ItemServiceFeign implements IItemService {
 	}
 	
 	@Autowired
-	IProductoClienteRest clienteFeign;
+	private IProductoClienteRest clienteFeign;
 
 }

@@ -14,12 +14,12 @@ import com.springboot.app.item.models.service.IItemService;
 public class ItemController {
 	
 	@GetMapping("/listar")
-	private List<Item>listar(){
+	public List<Item>listar(){
 		return itemService.findAll();
 	}
 	
 	@GetMapping("/ver/{id}/cantidad/{cantidad}")
-	private Item detalle(@PathVariable(value="id") Long id,  @PathVariable(value="cantidad") Integer cantidad) {
+	public Item detalle(@PathVariable(value="id") Long id,  @PathVariable(value="cantidad") Integer cantidad) {
 		return itemService.findById(id, cantidad);
 	}
 	
