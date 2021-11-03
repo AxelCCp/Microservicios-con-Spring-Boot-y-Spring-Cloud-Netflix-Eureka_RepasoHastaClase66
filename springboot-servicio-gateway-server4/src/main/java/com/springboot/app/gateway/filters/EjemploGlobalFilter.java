@@ -26,7 +26,7 @@ public class EjemploGlobalFilter implements GlobalFilter, Ordered {
 		exchange.getRequest().mutate().headers(h -> h.add("token","123456"));
 		
 		return chain.filter(exchange).then(Mono.fromRunnable(()->{
-			//AQUÍ VA LA LOGICA DEL FILTRO PRE 
+			//AQUÍ VA LA LOGICA DEL FILTRO POST
 			logger.info("Ejecutando filtro post");
 			
 			//-----SI VIENE UN TOKEN EN EL REQUEST, SE PASARÁ AL RESPONSE
